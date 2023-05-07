@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.26)
+project(CHESS)
+add_executable(CHESS.exe src/Entrypoint.cpp)
+include_directories(${SDL2_INCLUDE_DIRS})
+include_directories(${SDL2_IMAGE_INCLUDE_DIRS})
