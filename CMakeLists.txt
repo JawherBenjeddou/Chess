@@ -1,5 +1,12 @@
-cmake_minimum_required(VERSION 3.26)
-project(CHESS)
-add_executable(CHESS.exe src/Entrypoint.cpp)
-include_directories(${SDL2_INCLUDE_DIRS})
-include_directories(${SDL2_IMAGE_INCLUDE_DIRS})
+cmake_minimum_required(VERSION 3.0)  # Specify the minimum required version of CMake
+
+project(CHESS)  # Set the name of your project
+
+# Add the include directory
+include_directories(include)
+
+# Add the source files
+file(GLOB SOURCES "src/*.cpp")
+
+# Create an executable target
+add_executable(CHESS ${SOURCES})

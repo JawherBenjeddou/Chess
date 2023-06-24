@@ -6,7 +6,6 @@
 #include "Queen.h"
 #include "Rook.h"
 
-
 class ChessGame
 {
 public:
@@ -14,27 +13,32 @@ public:
 	explicit ChessGame(SDL_Handler* HANDLER);
 
 	// Destructor
-	~ChessGame()
-	{
+	~ChessGame();
 
-	}
 	void movepiece(uint32_t x, uint32_t y);
+
 private:
 	SDL_Handler* m_handler = nullptr;
 	//BLACK PIECES
-	Queen m_BlackQueen;
+	/*Queen m_BlackQueen;
 	King m_BlackKing;
 	Knight m_BlackKnight1;
-	//Knight m_BlackKnight2;
-	std::vector<Pawn> m_bpvector;
-	std::vector<Rook> m_brvector;
+	Knight m_BlackKnight2;
+
 	//WHITE PIECES
 	Queen m_WhiteQueen;
 	King  m_WhiteKing;
 	Knight m_WhiteKnight1;
-	//Knight m_WhiteKnight2;
+	Knight m_WhiteKnight2;*/
+	//BLACK ROOKS
+	//Rook *m_BlackRook1;
+	//Rook *m_BlackRook2;
+	////WHITE ROOKS
+	//Rook m_WhiteRook1;
+	//Rook m_WhiteRook2;
+	//PAWNS
 	std::vector<Pawn> m_wpvector;
-	//TO DO : REMOVE ROOK VECTORS AND INITIALIZE THEM USING INITIALIZER LIST..
-	std::vector<Rook> m_wrvector;
+	std::vector<Pawn> m_bpvector;
+
 };
 

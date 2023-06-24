@@ -11,7 +11,7 @@ void SDL_Handler::RenderBoard()
 	// set the window flags to be movable but not resizable
 	SDL_SetWindowResizable(m_window, SDL_FALSE);
 	SDL_SetWindowBordered(m_window, SDL_TRUE);
-	
+
 	//Checks if there are init errors
 	if (init() == false)
 	{
@@ -28,13 +28,13 @@ void SDL_Handler::LoadBoard()
 	if (!m_surface_board)
 	{
 		std::cerr << "Failed to load Board : " << IMG_GetError() << std::endl;
-		return ;
+		return;
 	}
 	m_texture_board = SDL_CreateTextureFromSurface(m_renderer, m_surface_board);
 
 	// Set destination rectangle
 	m_dst_rect = { 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT };
-	
+
 	//Clear the screen
 	SDL_RenderClear(m_renderer);
 

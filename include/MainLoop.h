@@ -3,14 +3,14 @@
 #include "SDL_Handler.h"
 #include "ChessGame.h"
 
-namespace Chess{
+namespace Chess {
 
 	void Run()
 	{
 		SDL_Event* Event = new SDL_Event();
 		SDL_Handler* Handler = new SDL_Handler();
 		ChessGame Game(Handler);
-		bool isRunning = true; 
+		bool isRunning = true;
 		// Set up a flag to indicate when the mouse button is pressed
 		int32_t mouseX, mouseY;
 		while (isRunning)
@@ -22,15 +22,15 @@ namespace Chess{
 				{
 					isRunning = false;
 				}
-					SDL_GetMouseState(&mouseX, &mouseY);
-					//std::cout << "X = " << mouseX << ", Y = " << mouseY << "\n";
-					//Game.movepiece(mouseX, mouseY);
+				SDL_GetMouseState(&mouseX, &mouseY);
+				//std::cout << "X = " << mouseX << ", Y = " << mouseY << "\n";
+				//Game.movepiece(mouseX, mouseY);
 			}
-	
 
-		}  
+
+		}
 		Handler->CleanUp();
 		delete Handler;
 		Handler = nullptr;
-	}	
-}	
+	}
+}
