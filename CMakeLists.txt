@@ -1,12 +1,18 @@
-cmake_minimum_required(VERSION 3.0)  # Specify the minimum required version of CMake
+cmake_minimum_required(VERSION 3.26)
 
-project(CHESS)  # Set the name of your project
-
-# Add the include directory
-include_directories(include)
+project(Chess)
 
 # Add the source files
-file(GLOB SOURCES "src/*.cpp")
+file(GLOB_RECURSE SOURCES "src/*.cpp")
 
-# Create an executable target
-add_executable(CHESS ${SOURCES})
+# Set include directories
+include_directories(include)
+
+# Set the output directory for the executable
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+# Add the executable
+add_executable(Chess ${SOURCES})
+
+# Copy assets to the build directory
+file(COPY assets DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
