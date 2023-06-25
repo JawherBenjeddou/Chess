@@ -1,13 +1,15 @@
 #include "ChessGame.h"
-
-ChessGame::ChessGame(SDL_Handler* HANDLER) 
+ChessGame::ChessGame(SDL_Handler* HANDLER) :
+	m_BR1{ HANDLER->GetRenderer(), std::make_pair(16, 15) },
+	m_BR2{ HANDLER->GetRenderer(), std::make_pair(546, 15) },
+	m_BK{ HANDLER->GetRenderer(), std::make_pair(320, 15), "assets/KingB.png" },
+	m_BQ{ HANDLER->GetRenderer(), std::make_pair(244, 15), "assets/QueenB.png" },
+	m_WR1{ HANDLER->GetRenderer(), std::make_pair(16, 545), "assets/RookW.png" },
+	m_WR2{ HANDLER->GetRenderer(), std::make_pair(320, 545), "assets/RookW.png" },
+	m_WQ{ HANDLER->GetRenderer(), std::make_pair(244, 545), "assets/QueenW.png" }
 {
-	/*
-	m_BlackRook1(HANDLER->GetRenderer(), std::make_pair(16, 15)),
-		m_BlackRook2(HANDLER->GetRenderer(), std::make_pair(546, 15))*/
 	m_handler = HANDLER;
 
-	//BLACK PIECES
 	//BLACK PAWNS
 	uint32_t x = 16;
 	for (size_t i = 0; i < 8; i++)
@@ -17,7 +19,6 @@ ChessGame::ChessGame(SDL_Handler* HANDLER)
 		x += 76;
 	}
 
-	//WHITE PIECES
 	//WHITE PAWNS
 	int32_t px = 16;
 	for (size_t i = 0; i < 8; i++)
@@ -26,14 +27,6 @@ ChessGame::ChessGame(SDL_Handler* HANDLER)
 		px += 76;
 	}
 
-	//WHITE ROOKS
-	//x = 16;
-	//for (size_t i = 0; i < 2; i++)
-	//{
-
-	//	m_brvector.push_back(Rook(m_handler->GetRenderer(), std::make_pair(x, 545), "assets/RookW.png"));
-	//	x += 530;
-	//}
 
 }
 

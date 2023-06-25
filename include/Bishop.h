@@ -11,10 +11,6 @@ public:
 	{
 		LoadPiece();
 	}
-
-
-	// Destructor
-	~Bishop();
-
+	Bishop();
 };
 

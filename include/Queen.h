@@ -13,8 +13,8 @@ public:
 	{
 		LoadPiece();
 	}
-	// Destructor
-	~Queen();
+	//Default Constructor 
+	Queen();
 
 };
 

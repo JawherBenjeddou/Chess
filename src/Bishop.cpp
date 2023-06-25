@@ -2,8 +2,3 @@
 
 
 
-
-Bishop::~Bishop()
-{
-
-}

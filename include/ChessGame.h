@@ -13,29 +13,24 @@ public:
 	explicit ChessGame(SDL_Handler* HANDLER);
 
 	void movepiece(uint32_t x, uint32_t y);
-	
+
 private:
+
 	SDL_Handler* m_handler = nullptr;
+	
 	//BLACK PIECES
-	/*Queen m_BlackQueen;
-	King m_BlackKing;
-	Knight m_BlackKnight1;
-	Knight m_BlackKnight2;
+	std::vector<Pawn> m_bpvector;
+	Rook m_BR1;
+	Rook m_BR2;
+	Queen m_BQ;
+	King  m_BK;
 
 	//WHITE PIECES
-	Queen m_WhiteQueen;
-	King  m_WhiteKing;
-	Knight m_WhiteKnight1;
-	Knight m_WhiteKnight2;*/
-	//BLACK ROOKS
-	//Rook *m_BlackRook1;
-	//Rook *m_BlackRook2;
-	////WHITE ROOKS
-	//Rook m_WhiteRook1;
-	//Rook m_WhiteRook2;
-	//PAWNS
 	std::vector<Pawn> m_wpvector;
-	std::vector<Pawn> m_bpvector;
+	Rook m_WR2;
+	Rook m_WR1;
+	Queen m_WQ;
+	King  m_WK;
 
 };
 

@@ -10,5 +10,7 @@ public:
 		LoadPiece();
 	}
 
+	//Default Constructor
+	Rook();
 };
 

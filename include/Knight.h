@@ -13,7 +13,5 @@ public:
 		LoadPiece();
 	}				
 
-	// Destructor
-	~Knight();
 };
 

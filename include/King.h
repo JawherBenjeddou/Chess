@@ -16,9 +16,6 @@ public:
 	{
 		LoadPiece();
 	}
-
-
-	// Destructor
-	~King();
+	King();
 
 };
