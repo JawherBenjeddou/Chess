@@ -12,11 +12,8 @@ public:
 	// Constructor
 	explicit ChessGame(SDL_Handler* HANDLER);
 
-	// Destructor
-	~ChessGame();
-
 	void movepiece(uint32_t x, uint32_t y);
-
+	
 private:
 	SDL_Handler* m_handler = nullptr;
 	//BLACK PIECES

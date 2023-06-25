@@ -9,8 +9,6 @@ public:
 	{
 		LoadPiece();
 	}
-	// Destructor
-	~Rook();
 
 };
 
