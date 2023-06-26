@@ -6,7 +6,7 @@
 
 ## Screenshots
 
-![Home Page](preview.png)
+![preview](https://github.com/JawherBenjeddou/Chess/assets/102749041/5e7659f3-c7bf-44f0-936d-2c775ee08145)
 
 ## Built With
 
