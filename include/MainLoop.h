@@ -23,8 +23,6 @@ namespace Chess {
 					isRunning = false;
 				}
 				SDL_GetMouseState(&mouseX, &mouseY);
-				//std::cout << "X = " << mouseX << ", Y = " << mouseY << "\n";
-				//Game.movepiece(mouseX, mouseY);
 			}
 
 

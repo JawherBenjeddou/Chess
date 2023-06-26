@@ -25,7 +25,7 @@
 		bool init();
 
 		//Gets called every frame To Render Updated texture onto the screen
-		void CalledEveryFrame();
+		void UpdateBoard();
 
 		//Get Window Renderer
 		 SDL_Renderer* GetRenderer() const { return m_renderer; }

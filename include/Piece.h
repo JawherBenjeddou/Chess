@@ -22,8 +22,9 @@ public:
 	void LoadPiece();
 
 	//Gets called every frame To Render Updated texture onto the screen
-	void CalledEveryFrame();
+	void UpdatePiece();
 
+	void MovePiece(int32_t x, int32_t y);
 	//Get Piece Surface
 	 SDL_Surface* GetSurface() const { return m_surface_piece; }
 

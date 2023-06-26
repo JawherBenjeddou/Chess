@@ -17,7 +17,7 @@ void Piece::LoadPiece()
 	SDL_RenderPresent(m_Renderer);
 }
 
-void Piece::CalledEveryFrame()
+void Piece::UpdatePiece()
 {
 	// Set destination rectangle
 	m_dst_rect.x = posx;
@@ -25,4 +25,10 @@ void Piece::CalledEveryFrame()
 	// Render the texture onto the screen
 	SDL_RenderCopy(m_Renderer, m_texture_piece, nullptr, &m_dst_rect);
 	SDL_RenderPresent(m_Renderer);
+}
+
+void Piece::MovePiece(int32_t X,int32_t Y)
+{
+	m_dst_rect.x = X;
+	m_dst_rect.y = Y;
 }

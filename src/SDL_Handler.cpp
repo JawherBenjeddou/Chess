@@ -45,7 +45,7 @@ void SDL_Handler::LoadBoard()
 }
 
 //called every frame after piece updated
-void SDL_Handler::CalledEveryFrame()
+void SDL_Handler::UpdateBoard()
 {
 	// Render the texture onto the screen
 	SDL_RenderCopy(m_renderer, m_texture_board, nullptr, &m_dst_rect);
