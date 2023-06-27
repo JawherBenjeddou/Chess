@@ -21,15 +21,13 @@ void Piece::LoadPiece()
 
 void Piece::UpdatePiece()
 {
-
 	// Render the texture onto the screen
 	SDL_RenderCopy(m_Renderer, m_texture_piece, nullptr, &m_dst_rect);
-
-	// Update the screen
-	SDL_RenderPresent(m_Renderer);
+	
 }
 void Piece::MovePiece(int32_t X,int32_t Y)
 {
 	m_dst_rect.x = X;
 	m_dst_rect.y = Y;
+
 }

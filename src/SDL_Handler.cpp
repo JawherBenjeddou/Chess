@@ -44,16 +44,10 @@ void SDL_Handler::LoadBoard()
 
 }
 
-//called every frame after piece updated
 void SDL_Handler::UpdateBoard()
 {
-	SDL_RenderClear(m_renderer);
-
 	// Render the texture onto the screen
 	SDL_RenderCopy(m_renderer, m_texture_board, nullptr, &m_dst_rect);
-
-	// Update the screen
-	SDL_RenderPresent(m_renderer);
 }
 
 

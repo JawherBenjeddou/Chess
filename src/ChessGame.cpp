@@ -52,12 +52,13 @@ void ChessGame::UpdateGameState(uint32_t x,uint32_t y)
 	m_BQ.UpdatePiece();
 	m_BKing.UpdatePiece();
 
-	//WHITE PIECES
+	////WHITE PIECES
 	m_WR1.UpdatePiece();
 	m_WR2.UpdatePiece();
 	m_WKnight.UpdatePiece();
 	m_WKnight2.UpdatePiece();
 	m_WB.UpdatePiece();
+
 	m_WB2.UpdatePiece();
 	m_WQ.UpdatePiece();
 	for (size_t i = 0; i < 8; i++)
@@ -70,6 +71,4 @@ void ChessGame::UpdateGameState(uint32_t x,uint32_t y)
 	{
 		m_wpvector[i].UpdatePiece();
 	}
-	m_handler->UpdateBoard();
-
 }
