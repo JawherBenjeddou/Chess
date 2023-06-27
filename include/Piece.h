@@ -1,7 +1,6 @@
 #pragma once
 #include"SDL_Handler.h"
 #include <utility>
-#define SUPER Piece
 
 class Piece
 {
@@ -11,8 +10,8 @@ public:
 	{
 		m_Renderer = renderer;
 		m_PATH = Path;
-		posx = pos.first;
-		posy = pos.second;
+		m_dst_rect.x = pos.first;
+		m_dst_rect.y = pos.second;
 	}
 
 	// Destructor
@@ -38,9 +37,6 @@ public:
 	  SDL_Rect* GetRect()  const { return &m_dst_rect; }
 private:
 
-	//Initial Position
-	std::pair<int, int> POS;
-
 	//SDL_Handler Renderer
 	SDL_Renderer* m_Renderer = nullptr;
 
@@ -56,8 +52,4 @@ private:
 
 	//Rect used For piece movement and size etc..
 	mutable SDL_Rect m_dst_rect = { 0 };
-public:
-	uint32_t posx = 0;
-	uint32_t posy = 0;
-	
 };

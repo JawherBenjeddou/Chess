@@ -8,9 +8,11 @@ void Piece::LoadPiece()
 		std::cerr << "Failed to load image: " << IMG_GetError() << std::endl;
 		return;
 	}
+
+	// Set the blend mode for the loaded texture
+	SDL_SetSurfaceBlendMode(m_surface_piece, SDL_BLENDMODE_BLEND);
+
 	m_texture_piece = SDL_CreateTextureFromSurface(m_Renderer, m_surface_piece);
-	m_dst_rect.x = posx;
-	m_dst_rect.y = posy;
 	m_dst_rect.w = PIECE_SIZE;
 	m_dst_rect.h = PIECE_SIZE;
 	SDL_RenderCopy(m_Renderer, m_texture_piece, nullptr, &m_dst_rect);
@@ -19,14 +21,13 @@ void Piece::LoadPiece()
 
 void Piece::UpdatePiece()
 {
-	// Set destination rectangle
-	m_dst_rect.x = posx;
-	m_dst_rect.y = posy;
+
 	// Render the texture onto the screen
 	SDL_RenderCopy(m_Renderer, m_texture_piece, nullptr, &m_dst_rect);
+
+	// Update the screen
 	SDL_RenderPresent(m_Renderer);
 }
-
 void Piece::MovePiece(int32_t X,int32_t Y)
 {
 	m_dst_rect.x = X;

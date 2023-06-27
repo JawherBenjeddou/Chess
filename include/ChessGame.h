@@ -12,9 +12,7 @@ public:
 	// Constructor
 	explicit ChessGame(SDL_Handler* HANDLER);
 
-	void UpdateGameState();
-
-	void UpdatePieces();
+	void UpdateGameState(uint32_t x, uint32_t y);
 private:
 
 	SDL_Handler* m_handler = nullptr;
@@ -40,5 +38,6 @@ private:
 	Bishop m_WB2;
 	Queen m_WQ;
 	King m_WKing;
+
 };
 

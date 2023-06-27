@@ -11,8 +11,7 @@ namespace Chess {
 		SDL_Handler* Handler = new SDL_Handler();
 		ChessGame Game(Handler);
 		bool isRunning = true;
-		// Set up a flag to indicate when the mouse button is pressed
-		int32_t mouseX, mouseY;
+
 		while (isRunning)
 		{
 
@@ -22,11 +21,12 @@ namespace Chess {
 				{
 					isRunning = false;
 				}
-				SDL_GetMouseState(&mouseX, &mouseY);
 			}
-
-
-		}
+			int32_t mouseX, mouseY;
+			Uint32 mouseState = SDL_GetMouseState(&mouseX, &mouseY);
+			std::cout << mouseX <<" " <<  mouseY << std::endl;
+			Game.UpdateGameState(mouseX, mouseY);
+	}
 		Handler->CleanUp();
 		delete Handler;
 		Handler = nullptr;

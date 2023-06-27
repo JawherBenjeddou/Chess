@@ -4,6 +4,7 @@ SDL_Handler::SDL_Handler()
 {
 	RenderBoard();
 }
+
 void SDL_Handler::RenderBoard()
 {
 	m_window = SDL_CreateWindow("CHESS", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN);
@@ -41,15 +42,20 @@ void SDL_Handler::LoadBoard()
 	// Render the texture onto the screen
 	SDL_RenderCopy(m_renderer, m_texture_board, nullptr, &m_dst_rect);
 
-	SDL_RenderPresent(m_renderer);
 }
 
 //called every frame after piece updated
 void SDL_Handler::UpdateBoard()
 {
+	SDL_RenderClear(m_renderer);
+
 	// Render the texture onto the screen
 	SDL_RenderCopy(m_renderer, m_texture_board, nullptr, &m_dst_rect);
+
+	// Update the screen
+	SDL_RenderPresent(m_renderer);
 }
+
 
 bool SDL_Handler::init()
 {
