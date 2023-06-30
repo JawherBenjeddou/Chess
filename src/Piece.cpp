@@ -25,9 +25,3 @@ void Piece::UpdatePiece()
 	SDL_RenderCopy(m_Renderer, m_texture_piece, nullptr, &m_dst_rect);
 	
 }
-void Piece::MovePiece(int32_t X,int32_t Y)
-{
-	m_dst_rect.x = X;
-	m_dst_rect.y = Y;
-
-}

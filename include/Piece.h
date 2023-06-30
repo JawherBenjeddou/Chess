@@ -13,6 +13,9 @@ public:
 		m_dst_rect.x = pos.first;
 		m_dst_rect.y = pos.second;
 	}
+	//Default Constructor 
+	
+	Piece();
 
 	// Destructor
 	~Piece() {}
@@ -23,7 +26,6 @@ public:
 	//Gets called every frame To Render Updated texture onto the screen
 	void UpdatePiece();
 
-	void MovePiece(int32_t x, int32_t y);
 	//Get Piece Surface
 	 SDL_Surface* GetSurface() const { return m_surface_piece; }
 
@@ -35,6 +37,7 @@ public:
 	
 	//Get Piece Rect
 	  SDL_Rect* GetRect()  const { return &m_dst_rect; }
+
 private:
 
 	//SDL_Handler Renderer
@@ -49,7 +52,6 @@ private:
 
 	//Texture that handles the piece
 	SDL_Texture* m_texture_piece = nullptr;
-
 	//Rect used For piece movement and size etc..
 	mutable SDL_Rect m_dst_rect = { 0 };
 };
