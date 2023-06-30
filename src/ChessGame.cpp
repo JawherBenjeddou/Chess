@@ -38,10 +38,58 @@ ChessGame::ChessGame(SDL_Handler* HANDLER) :
 
 
 }
+
 void ChessGame::generateChessboardMatrix()
 {
+	//BLACK PIECES
+	m_Matrix[0][0] = m_BR1;
+	m_Matrix[0][1] = m_BKnight;
+	m_Matrix[0][2] = m_BB;
+	m_Matrix[0][3] = m_BQ;
+	m_Matrix[0][4] = m_BKing;
+	m_Matrix[0][5] = m_BB2;
+	m_Matrix[0][6] = m_BKnight2;
+	m_Matrix[0][7] = m_BR2;
+	//BLACK PIECES
+	m_Matrix[7][0] = m_WR1;
+	m_Matrix[7][1] = m_WKnight;
+	m_Matrix[7][2] = m_WB;
+	m_Matrix[7][3] = m_WQ;
+	m_Matrix[7][4] = m_WKing;
+	m_Matrix[7][5] = m_WB2;
+	m_Matrix[7][6] = m_WKnight2;
+	m_Matrix[7][7] = m_WR2;
+	for (uint32_t row = 2; row < 7; row++)
+	{
+		for (uint32_t col = 0; col < 8; col++)
+		{
+			m_Matrix[row][col] = nullptr;
+		}
+		if (row == 5) break;
+	}
+
+
+
+	//to check whether the matrix is filled correctly 
+	for (uint32_t row = 0; row < 8; row++)
+	{
+		for (uint32_t col = 0; col < 8; col++)
+		{
+			if (m_Matrix[row][col] == nullptr)
+			{
+				std::cout << "nullptr ";
+			}
+			else
+			{
+				// Assuming Piece has a member function or operator overload for printing
+				std::cout << m_Matrix[row][col]->SayMyName();
+			}
+		}
+		std::cout << std::endl;
+	}
 
 }
+
 void ChessGame::UpdateGameState()
 {
 	//Update Board

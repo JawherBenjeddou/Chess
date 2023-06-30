@@ -25,3 +25,8 @@ void Piece::UpdatePiece()
 	SDL_RenderCopy(m_Renderer, m_texture_piece, nullptr, &m_dst_rect);
 	
 }
+
+std::string Piece::SayMyName()
+{
+	return "i'm a piece";
+}

@@ -40,5 +40,7 @@ private:
 	Queen *m_WQ;
 	King *m_WKing;
 
+	//Board Matrix
+	Piece* m_Matrix[8][8];
 };
 

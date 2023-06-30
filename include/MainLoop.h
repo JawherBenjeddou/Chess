@@ -10,6 +10,7 @@ namespace Chess {
 		SDL_Event* Event = new SDL_Event();
 		SDL_Handler* Handler = new SDL_Handler();
 		ChessGame Game(Handler);
+		Game.generateChessboardMatrix();
 		bool isRunning = true;
 		while (isRunning)
 		{
@@ -20,6 +21,7 @@ namespace Chess {
 					isRunning = false;
 				}
 			}
+			
 			Game.UpdateGameState();
 			SDL_RenderPresent(Handler->GetRenderer());
 	}
