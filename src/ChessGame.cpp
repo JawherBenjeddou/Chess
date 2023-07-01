@@ -8,18 +8,18 @@ ChessGame::ChessGame(SDL_Handler* HANDLER) :
 	m_BB2{ new Bishop(HANDLER->GetRenderer(), std::make_pair(168, 15)) },
 	m_BKing{ new King(HANDLER->GetRenderer(), std::make_pair(320, 15)) },
 	m_BQ{ new Queen(HANDLER->GetRenderer(), std::make_pair(244, 15)) },
-	m_WR1{ new Rook(HANDLER->GetRenderer(), std::make_pair(16, 545), "assets/RookW.png") },
-	m_WR2{ new Rook(HANDLER->GetRenderer(), std::make_pair(548, 545), "assets/RookW.png") },
-	m_WKnight{ new Knight(HANDLER->GetRenderer(), std::make_pair(472, 545), "assets/KnightW.png") },
-	m_WKnight2{ new Knight(HANDLER->GetRenderer(), std::make_pair(92, 545), "assets/KnightW.png") },
-	m_WKing{ new King(HANDLER->GetRenderer(), std::make_pair(320, 545), "assets/KingW.png") },
-	m_WB{ new Bishop(HANDLER->GetRenderer(), std::make_pair(396, 545), "assets/BishopW.png") },
-	m_WB2{ new Bishop(HANDLER->GetRenderer(), std::make_pair(168, 545), "assets/BishopW.png") },
-	m_WQ{ new Queen(HANDLER->GetRenderer(), std::make_pair(244, 545), "assets/QueenW.png") }
+	m_WR1{ new Rook(HANDLER->GetRenderer(), std::make_pair(16, 547), "assets/RookW.png") },
+	m_WR2{ new Rook(HANDLER->GetRenderer(), std::make_pair(548, 547), "assets/RookW.png") },
+	m_WKnight{ new Knight(HANDLER->GetRenderer(), std::make_pair(472, 547), "assets/KnightW.png") },
+	m_WKnight2{ new Knight(HANDLER->GetRenderer(), std::make_pair(92, 547), "assets/KnightW.png") },
+	m_WKing{ new King(HANDLER->GetRenderer(), std::make_pair(320, 547), "assets/KingW.png") },
+	m_WB{ new Bishop(HANDLER->GetRenderer(), std::make_pair(396, 547), "assets/BishopW.png") },
+	m_WB2{ new Bishop(HANDLER->GetRenderer(), std::make_pair(168, 547), "assets/BishopW.png") },
+	m_WQ{ new Queen(HANDLER->GetRenderer(), std::make_pair(244, 547), "assets/QueenW.png") }
 {
 	m_handler = HANDLER;
 	//BLACK PAWNS
-	uint32_t x = 16;
+	uint32_t x = 15;
 	for (size_t i = 0; i < 8; i++)
 	{
 
@@ -28,15 +28,14 @@ ChessGame::ChessGame(SDL_Handler* HANDLER) :
 	}
 
 	//WHITE PAWNS
-	int32_t px = 16;
+	int32_t px = 15;
 	for (size_t i = 0; i < 8; i++)
 	{
-		m_wpvector.push_back(new Pawn(m_handler->GetRenderer(), std::make_pair(px, 465), "assets/PawnW.png"));
+		m_wpvector.push_back(new Pawn(m_handler->GetRenderer(), std::make_pair(px, 471), "assets/PawnW.png"));
 		px += 76;
 	}
-
 	generateChessboardMatrix();
-
+	generatePosMatrix();
 }
 
 void ChessGame::generateChessboardMatrix()
@@ -68,31 +67,22 @@ void ChessGame::generateChessboardMatrix()
 		if (row == 5) break;
 	}
 
-
-
-	//to check whether the matrix is filled correctly 
-	for (uint32_t row = 0; row < 8; row++)
-	{
-		for (uint32_t col = 0; col < 8; col++)
-		{
-			if (m_Matrix[row][col] == nullptr)
-			{
-				std::cout << "nullptr ";
-			}
-			else
-			{
-				// Assuming Piece has a member function or operator overload for printing
-				std::cout << "test";
-			}
-		}
-		std::cout << std::endl;
-	}
-
 }
 
-std::pair<int, int> ChessGame::generatePosMatrix()
+void ChessGame::generatePosMatrix()
 {
-	
+	int x=16 ,y = 15;
+	for (uint16_t row = 0; row < 8; row++)
+	{
+		for (uint16_t col = 0; col< 8; col++)
+		{
+			m_PosMatrix[row][col] = std::make_pair(x, y);
+				x += 76;
+		}
+		y += 76;
+		x = 16;
+	}
+
 }
 
 void ChessGame::UpdateGameState()

@@ -16,7 +16,7 @@ public:
 
 	void generateChessboardMatrix();
 
-	std::pair<int,int> generatePosMatrix();
+	void generatePosMatrix();
 private:
 	SDL_Handler* m_handler = nullptr;
 
