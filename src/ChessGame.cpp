@@ -36,6 +36,7 @@ ChessGame::ChessGame(SDL_Handler* HANDLER) :
 	}
 	generateChessboardMatrix();
 	generatePosMatrix();
+	std::cout << colliding;
 }
 
 void ChessGame::generateChessboardMatrix()
@@ -119,4 +120,9 @@ void ChessGame::UpdateGameState()
 	{
 		m_wpvector[i]->UpdatePiece();
 	}
+}
+
+bool ChessGame::arePiecesColliding(const SDL_Rect& rect1, const SDL_Rect& rect2) {
+	SDL_Rect intersection;
+	return SDL_IntersectRect(&rect1, &rect2, &intersection) == SDL_TRUE;
 }

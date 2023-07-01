@@ -16,7 +16,9 @@ public:
 
 	void generateChessboardMatrix();
 
-	void generatePosMatrix();
+	void generatePosMatrix(); 
+
+	bool arePiecesColliding(const SDL_Rect& rect1, const SDL_Rect& rect2);
 private:
 	SDL_Handler* m_handler = nullptr;
 
@@ -46,5 +48,6 @@ private:
 	Piece* m_Matrix[8][8];
 
 	std::pair<int, int> m_PosMatrix[8][8];
+
 };
 
