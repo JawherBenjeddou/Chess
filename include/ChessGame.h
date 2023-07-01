@@ -15,6 +15,8 @@ public:
 	void UpdateGameState();
 
 	void generateChessboardMatrix();
+
+	std::pair<int,int> generatePosMatrix();
 private:
 	SDL_Handler* m_handler = nullptr;
 
@@ -42,5 +44,7 @@ private:
 
 	//Board Matrix
 	Piece* m_Matrix[8][8];
+
+	std::pair<int, int> m_PosMatrix[8][8];
 };
 

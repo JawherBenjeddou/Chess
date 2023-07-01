@@ -26,7 +26,3 @@ void Piece::UpdatePiece()
 	
 }
 
-std::string Piece::SayMyName()
-{
-	return "i'm a piece";
-}

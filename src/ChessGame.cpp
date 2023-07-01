@@ -18,7 +18,6 @@ ChessGame::ChessGame(SDL_Handler* HANDLER) :
 	m_WQ{ new Queen(HANDLER->GetRenderer(), std::make_pair(244, 545), "assets/QueenW.png") }
 {
 	m_handler = HANDLER;
-
 	//BLACK PAWNS
 	uint32_t x = 16;
 	for (size_t i = 0; i < 8; i++)
@@ -36,6 +35,7 @@ ChessGame::ChessGame(SDL_Handler* HANDLER) :
 		px += 76;
 	}
 
+	generateChessboardMatrix();
 
 }
 
@@ -82,12 +82,17 @@ void ChessGame::generateChessboardMatrix()
 			else
 			{
 				// Assuming Piece has a member function or operator overload for printing
-				std::cout << m_Matrix[row][col]->SayMyName();
+				std::cout << "test";
 			}
 		}
 		std::cout << std::endl;
 	}
 
+}
+
+std::pair<int, int> ChessGame::generatePosMatrix()
+{
+	
 }
 
 void ChessGame::UpdateGameState()
