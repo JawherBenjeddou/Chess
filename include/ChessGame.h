@@ -44,9 +44,10 @@ private:
 	Queen *m_WQ;
 	King *m_WKing;
 
-	//Board Matrix
+	//Board Pieces 
 	Piece* m_Matrix[8][8];
 
+	//Board Positions 
 	std::pair<int, int> m_PosMatrix[8][8];
 
 };

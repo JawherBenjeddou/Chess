@@ -26,3 +26,7 @@ void Piece::UpdatePiece()
 	
 }
 
+void Piece::PossibleMoves()
+{
+	return;
+}

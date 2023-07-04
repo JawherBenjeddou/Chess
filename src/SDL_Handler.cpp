@@ -48,7 +48,7 @@ void SDL_Handler::UpdateBoard()
 {
 	// Render the texture onto the screen
 	SDL_RenderCopy(m_renderer, m_texture_board, nullptr, &m_dst_rect);
-}
+} 
 
 
 bool SDL_Handler::init()
@@ -81,7 +81,6 @@ void SDL_Handler::CleanUp()
 {
 	SDL_DestroyRenderer(m_renderer);
 	SDL_DestroyWindow(m_window);
-	SDL_DestroyTexture(m_texture_board);
 	SDL_FreeSurface(m_surface_board);
 	SDL_Quit();
 }

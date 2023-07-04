@@ -38,6 +38,7 @@ public:
 	//Get Piece Rect
 	  SDL_Rect* GetRect()  const { return &m_dst_rect; }
 
+	 virtual void PossibleMoves();
 private:
 
 	//SDL_Handler Renderer

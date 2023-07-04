@@ -18,4 +18,6 @@ public:
 	}
 	King();
 
+	void PossibleMoves() override;
+
 };

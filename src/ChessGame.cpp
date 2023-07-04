@@ -36,7 +36,6 @@ ChessGame::ChessGame(SDL_Handler* HANDLER) :
 	}
 	generateChessboardMatrix();
 	generatePosMatrix();
-	std::cout << colliding;
 }
 
 void ChessGame::generateChessboardMatrix()
