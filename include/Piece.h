@@ -18,7 +18,7 @@ public:
 	Piece();
 
 	// Destructor
-	~Piece() {}
+	virtual ~Piece() {}
 
 	//render this piece
 	void LoadPiece();
@@ -38,7 +38,10 @@ public:
 	//Get Piece Rect
 	  SDL_Rect* GetRect()  const { return &m_dst_rect; }
 
-	 virtual void PossibleMoves();
+	  virtual void PossibleMoves(Piece* m_PosMatrix[8][8]) {}
+
+	//Returns Piece Position in the Board
+	  std::pair<uint16_t, uint16_t> Piece::getPosition(Piece* ChessBoard[8][8]);
 private:
 
 	//SDL_Handler Renderer

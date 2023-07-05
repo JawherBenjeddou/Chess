@@ -11,7 +11,6 @@ public:
 		: SUPER(renderer, Path, pos) // Call parent constructor using initializer list
 	{
 		LoadPiece();
-	}				
-
+	}			
 };
 

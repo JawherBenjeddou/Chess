@@ -12,5 +12,6 @@ public:
 
 	//Default Constructor
 	Rook();
+
 };
 

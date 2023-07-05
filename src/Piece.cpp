@@ -26,7 +26,15 @@ void Piece::UpdatePiece()
 	
 }
 
-void Piece::PossibleMoves()
-{
-	return;
+std::pair<uint16_t, uint16_t> Piece::getPosition(Piece* ChessBoard[8][8]) {
+	for (uint16_t row = 0; row < 8; row++) {
+		for (uint16_t col = 0; col < 8; col++) {
+			if (ChessBoard[row][col] == (this)) {
+				return std::make_pair(row, col);
+			}
+		}
+	}
+
+	// Piece not found, return an invalid position
+	return std::make_pair(-1, -1);
 }

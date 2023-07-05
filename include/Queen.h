@@ -16,5 +16,6 @@ public:
 	//Default Constructor 
 	Queen();
 
+
 };
 

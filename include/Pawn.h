@@ -14,5 +14,6 @@ public:
 	}
 	// Destructor
 	~Pawn() {}
+
 };
 

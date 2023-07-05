@@ -36,6 +36,7 @@ ChessGame::ChessGame(SDL_Handler* HANDLER) :
 	}
 	generateChessboardMatrix();
 	generatePosMatrix();
+	std::cout << m_BR2->getPosition(m_Matrix).first << "," << m_BR2->getPosition(m_Matrix).second;
 }
 
 void ChessGame::generateChessboardMatrix()
