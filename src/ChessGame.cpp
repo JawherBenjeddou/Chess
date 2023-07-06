@@ -36,7 +36,7 @@ ChessGame::ChessGame(SDL_Handler* HANDLER) :
 	}
 	generateChessboardMatrix();
 	generatePosMatrix();
-	std::cout << m_BR2->getPosition(m_Matrix).first << "," << m_BR2->getPosition(m_Matrix).second;
+	m_BKing->PossibleMoves(m_Matrix);
 }
 
 void ChessGame::generateChessboardMatrix()
@@ -67,7 +67,6 @@ void ChessGame::generateChessboardMatrix()
 		}
 		if (row == 5) break;
 	}
-
 }
 
 void ChessGame::generatePosMatrix()

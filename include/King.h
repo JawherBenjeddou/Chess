@@ -19,5 +19,4 @@ public:
 	King();
 
 	void PossibleMoves(Piece* m_PosMatrix[8][8]) override;
-
 };
