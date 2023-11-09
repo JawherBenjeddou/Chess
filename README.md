@@ -21,15 +21,12 @@ My goals for this project were:
 - SDL2_Image
 
 ## Build process
-- create a build rep
-- run cmake 
+-git clone --recursive and you hopefully good to go 
 ## Requirements
-
 - x64, c++ 17 (others should work too)
 - SDL2
 - SDL2_image
 ## 🤝 Support
-
 Contributions, issues, and feature requests are welcome!
 
 Give a ⭐️ if you like this project!
