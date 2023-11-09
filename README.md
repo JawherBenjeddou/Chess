@@ -4,9 +4,6 @@
 
 - [Repo](https://github.com/JawherBenjeddou/Chess)
 
-## Screenshots
-
-![preview](https://github.com/JawherBenjeddou/Chess/assets/102749041/5e7659f3-c7bf-44f0-936d-2c775ee08145)
 ## Goals
 My goals for this project were:
 - Making a chess game using only oop

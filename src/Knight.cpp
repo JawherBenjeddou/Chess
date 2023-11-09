@@ -7,11 +7,11 @@ Knight::Knight(Team team, std::pair<int, int> pos, SDL_Handler* handler)
 	std::string filename;
 	if (team == BLACK)
 	{
-		filename = "assets/theme1/KnightB.png";
+		filename = "assets/theme2/KnightB.png";
 	}
 	else
 	{
-		filename = "assets/theme1/KnightW.png";
+		filename = "assets/theme2/KnightW.png";
 	}
 	m_handler = handler;
 	m_texture = handler->loadImage(filename);

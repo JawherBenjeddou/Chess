@@ -9,11 +9,11 @@ King::King(Team team, std::pair<int, int> pos, SDL_Handler* handler)
 	std::string filename;
 	if (team == BLACK)
 	{
-		filename = "assets/theme1/KingB.png";
+		filename = "assets/theme2/KingB.png";
 	}
 	else
 	{
-		filename = "assets/theme1/KingW.png";
+		filename = "assets/theme2/KingW.png";
 	}
 	m_handler = handler;
 	m_texture = handler->loadImage(filename);

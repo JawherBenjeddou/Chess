@@ -8,11 +8,11 @@ Pawn::Pawn(Team team, std::pair<int, int> pos, SDL_Handler* handler)
 	std::string filename;
 	if (team == BLACK)
 	{
-		filename = "assets/theme1/PawnB.png";
+		filename = "assets/theme2/PawnB.png";
 	}
 	else
 	{
-		filename = "assets/theme1/PawnW.png";
+		filename = "assets/theme2/PawnW.png";
 	}
 	m_handler = handler;
 	m_texture = handler->loadImage(filename);

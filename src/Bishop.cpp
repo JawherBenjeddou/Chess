@@ -7,11 +7,11 @@ Bishop::Bishop(Team team, std::pair<int, int> pos, SDL_Handler* handler)
 	std::string filename;
 	if (team == BLACK)
 	{
-		filename = "assets/theme1/BishopB.png";
+		filename = "assets/theme2/BishopB.png";
 	}
 	else
 	{
-		filename = "assets/theme1/BishopW.png";
+		filename = "assets/theme2/BishopW.png";
 	}
 	m_handler = handler;
 	m_texture = handler->loadImage(filename);
